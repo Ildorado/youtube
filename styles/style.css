@@ -1,0 +1,207 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}
+
+.header__form__search-query {
+  border: 1px solid black;
+  width: 40vw;
+  font-size: 0.5em;
+}
+
+.header__h1 {
+  font-size: 1em;
+}
+
+.header__form__submit {
+  border: 1px solid black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* margin: 5vh 10vw; */
+}
+
+.main__grid {
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  background-color: gray; */
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: initial;
+}
+
+.main__grid::-webkit-scrollbar {
+  display: none;
+}
+
+.main__grid__page {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.main__grid__element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2vh 3vw 2vh 0;
+  min-width: 97vw;
+}
+
+.main__grid__element__card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  align-items: center;
+  background-color: white;
+}
+
+.main__grid__element__card__title {
+  width: 100%;
+  background-color: green;
+  color: white;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.main__grid__element__card__img {
+  height: 180px;
+  width: 320px;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.main__grid__element__card__author {
+  width: 100%;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.main__grid__element__card__date {
+  width: 100%;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.main__grid__element__card__description {
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+  margin-top: 3vh;
+  white-space: initial;
+}
+
+.main__pagination {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main__pagination__element {
+  display: none;
+  color: black;
+  background-color:gray;
+  float: left;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.main__pagination__element#first {
+  background-color: orange;
+  color: white;
+  display:unset;
+}
+.main__pagination__element#next{
+  display:unset;
+}
+
+.main__pagination__element#current {
+  background-color: #4CAF50;
+  color: white;
+}
+
+@media(max-width:420px) {
+  .main__grid__element__card__img {
+    width: 100%;
+  }
+  .main__grid__element__card {
+    display: flex;
+    max-width: 230px;
+  }
+  .main__grid__element {
+    height: 400px;
+  }
+  .main__grid__element__card__title {
+    margin-top: 1vh;
+  }
+  .main__grid__element__card__author {
+    width: 100%;
+    text-align: center;
+    margin-top: 1vh;
+  }
+  .main__grid__element__card__date {
+    margin-top: 1vh;
+  }
+  .main__grid__element__card__description {
+    margin-top: 1vh;
+  }
+}
+
+@media(min-width:768px) {
+  .main__grid__element {
+    min-width: 47vw;
+  }
+}
+
+@media(min-width:998px) {
+  .header {
+    font-size: 1em;
+  }
+  .header__h1 {
+    font-size: 2em;
+  }
+  .header__form__search-query {
+    font-size: 1em;
+  }
+  .header__form__submit {
+    font-size: 1em;
+  }
+}
+
+@media(min-width:1200px) {
+  .main__pagination__element {
+    padding: 8px 16px;
+  }
+  .main__grid {
+    font-size: 1.2em;
+  }
+}
+
+@media(min-width:1400px) {
+  .main__grid__element {
+    min-width: 31vw;
+  }
+  .header {
+    font-size: 2em;
+  }
+}
+
+@media(min-width:1800px) {
+  .main__grid__element {
+    min-width: 22vw;
+  }
+  .main__grid {
+    font-size: 1.5em;
+  }
+}
